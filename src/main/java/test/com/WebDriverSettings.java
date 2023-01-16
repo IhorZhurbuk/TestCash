@@ -10,11 +10,11 @@ public class WebDriverSettings {
     public ChromeDriver driver;
     public String key = "webdriver.chrome.driver";
     public String value = "C:\\Users\\Ihor\\Driver\\chromedriver.exe";
-    public static String url;
-    public static String userName;
+    public  String url = "https://my.cashalot.org.ua/";
+  /*  public static String userName;
     public static String userPassword;
-
-   // UsernameAndPassword usernameAndPassword = new UsernameAndPassword("+38 (111) 111 - 11 - 11", "rsZc4aQSQWW2cX8wn5KE_");
+*/
+    UsernameAndPassword usernameAndPassword = new UsernameAndPassword("+38 (111) 111 - 11 - 11", "rsZc4aQSQWW2cX8wn5KE_");
 
     @Before
     public void setUp() {
