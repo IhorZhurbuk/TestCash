@@ -21,8 +21,8 @@ public class MainTest extends WebDriverSettings {
         var name = driver.findElement(By.id("PhoneNumberView"));
         var pass = driver.findElement(By.id("Password"));
         var login = driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/main/div/div[2]/div/form/div[4]/input"));
-        name.sendKeys(userName);
-        pass.sendKeys(userPassword);
+        name.sendKeys(usernameAndPassword.username());
+        pass.sendKeys(usernameAndPassword.password());
         login.click();
         var expectedUrl = "https://my.cashalot.org.ua/?returnUrl=%2F";
         var actualUrl = driver.getCurrentUrl();
@@ -91,7 +91,7 @@ public class MainTest extends WebDriverSettings {
     @Test
     public void forgotPass() {
         var name = driver.findElement(By.id("PhoneNumberView"));
-        name.sendKeys(userName);
+        name.sendKeys(usernameAndPassword.username());
         driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/main/div/div[2]/div/div/div/div[1]/form/a")).click();
         var expectedUrl = "https://my.cashalot.org.ua/Account/ForgotPasswordBefore";
         var actualUrl = driver.getCurrentUrl();
@@ -120,7 +120,7 @@ public class MainTest extends WebDriverSettings {
         var name = driver.findElement(By.id("PhoneNumberView"));
         var pass = driver.findElement(By.id("Password"));
         var login = driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/main/div/div[2]/div/form/div[4]/input"));
-        name.sendKeys(userName);
+        name.sendKeys(usernameAndPassword.username());
         pass.sendKeys("<script>window.eval = function(code){console.log(code)}</script>");
         login.click();
         var webElement = driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/main/div/div[2]/div/form/div[1]/ul/li"));

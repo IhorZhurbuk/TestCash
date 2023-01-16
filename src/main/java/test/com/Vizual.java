@@ -47,9 +47,9 @@ public class Vizual extends Frame {
         start.setBounds(100, 250, 100, 30);
         add(start);
         start.addActionListener(e -> {
-            WebDriverSettings.url = txtUrl.getText();
+           /* WebDriverSettings.url = txtUrl.getText();
             WebDriverSettings.userName = txtLogin.getText();
-            WebDriverSettings.userPassword = txtPass.getText();
+            WebDriverSettings.userPassword = txtPass.getText();*/
         });
 
         refresh = new JButton("Refresh");
